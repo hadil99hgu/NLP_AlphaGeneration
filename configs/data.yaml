@@ -1,0 +1,45 @@
+sec:
+sec:
+  urls:
+    company_tickers: "https://www.sec.gov/files/company_tickers.json"
+    submissions: "https://data.sec.gov/submissions/CIK{cik10}.json"
+    submissions_extra: "https://data.sec.gov/submissions/{filename}"
+    companyfacts: "https://data.sec.gov/api/xbrl/companyfacts/CIK{cik10}.json"
+    document: "https://www.sec.gov/Archives/edgar/data/{cik}/{accession_compact}/{primary_document}"
+ 
+  forms:
+    - 10-K
+    - 10-Q
+
+  start_date: "2015-01-01"
+  end_date: null
+
+
+  tickers:
+    - AAPL
+    - MSFT
+    - NVDA
+    - AMZN
+    - META
+    - GOOGL
+    - JPM
+    - XOM
+    - JNJ
+    - PG
+
+  max_requests_per_second: 6
+
+prices:
+  source: yfinance
+  start_date: "2014-01-01"
+  end_date: null
+
+factors:
+  fama_french_5: true
+  momentum: true
+
+paths:
+  raw: data/raw
+  interim: data/interim
+  processed: data/processed
+  logs: data/logs
